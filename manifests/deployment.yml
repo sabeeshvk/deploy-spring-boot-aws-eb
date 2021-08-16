@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksdevtestfree-053e"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksdevtestfree-053e"
+  template:
+    metadata:
+      labels:
+        app: "aksdevtestfree-053e"
+    spec:
+      containers:
+        - name: "aksdevtestfree-053e"
+          image: "aksdocker.azurecr.io/aksdevtestfree"
+          ports:
+          - containerPort: 5000
