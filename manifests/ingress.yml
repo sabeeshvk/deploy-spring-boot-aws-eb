@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "aksdevtestfree-053e"
+    labels:
+        app: "aksdevtestfree-053e"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: springboot-aksdevtestfree-053e.6d7869ee39f1419db3e3.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "aksdevtestfree-053e"
+                servicePort: 5000
